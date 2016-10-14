@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../lib/jshashtable-3.0.js"></script>
+	<script type="text/javascript" src="../../src/jquery.numberformatter.js"></script>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+			$('div').parseNumber({format: '#,###.00', locale: 'es', strict: true});
+	    });
+	</script>
+</head>
+<body>
+	<p>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=61">Issue #61</a>
+	</p>
+	
+	<div>100.000,12,3</div>
+	<p>
+		Expected: NaN
+	</p>
+</body>
+</html>

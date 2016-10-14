@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../lib/jshashtable-3.0.js"></script>
+	<script type="text/javascript" src="../../src/jquery.numberformatter.js"></script>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+			$('div').formatNumber({format:"#,###.00", locale:"en_us", isFullLocale: true, round: false});
+	    });
+	</script>
+</head>
+<body>
+	<p>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=56">Issue #56</a>
+	</p>
+	
+	<div>2233</div>
+	<p>
+		Expected: 2,233.00
+	</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../lib/jshashtable-3.0.js"></script>
+	<script type="text/javascript" src="../../src/jquery.numberformatter.js"></script>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+			$('div').parseNumber({format: '#,##0 m2', locale: 'en', allowPostfix: true});
+			$('div').formatNumber({format: '#,##0 m2', locale: 'en'});
+	    });
+	</script>
+</head>
+<body>
+	<p>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=69">Issue #69</a>
+	</p>
+	
+	<div>100 m2</div>
+	<p>
+		Expected: 100 m2
+	</p>
+</body>
+</html>

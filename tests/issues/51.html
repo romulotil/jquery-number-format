@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../lib/jshashtable-3.0.js"></script>
+	<script type="text/javascript" src="../../src/jquery.numberformatter.js"></script>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+			$('div.part1').parseNumber({format: '#,##0.00', locale: 'en', isPercentage: false, autoDetectPercentage: false});
+			$('div.part1').formatNumber({format: '#,##0%', locale: 'en', isPercentage: false, autoDetectPercentage: false});
+			
+			$('div.part2').parseNumber({format: '#,##0.00 %', locale: 'en', isPercentage: false, autoDetectPercentage: false});
+			$('div.part2').formatNumber({format: '#,##0 %', locale: 'en'});
+	    });
+	</script>
+</head>
+<body>
+	<p>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=51">Issue #51</a>
+	</p>
+	
+	<div class="part1">100%</div>
+	<p>
+		Expected: 100%
+	</p>
+	<div class="part2">0.5</div>
+	<p>
+		Expected: 50 %
+	</p>
+</body>
+</html>
